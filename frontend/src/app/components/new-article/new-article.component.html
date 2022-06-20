@@ -1,0 +1,25 @@
+<form class="text-white">
+  <div class="mb-3">
+    <label for="articleNombre" class="form-label">Article Nombre</label>
+    <input type="text" class="form-control" #articleNombre>
+  </div>
+  <div class="mb-3">
+    <label for="articleDescripcion" class="form-label">Article Descripcion</label>
+    <textarea class="form-control" #articleDescripcion rows="3"></textarea>
+  </div>
+  <div class="mb-3">
+    <label for="articleFamilia" class="form-label">Article Familia</label>
+    <input type="email" class="form-control" #articleFamilia>
+  </div>
+  <div class="mb-3">
+    <label for="articleProcedencia" class="form-label">Article Procedencia</label>
+    <input type="email" class="form-control" #articleProcedencia>
+  </div>
+  <div class="mb-3">
+    <label for="articleUrlImg" class="form-label">Article UrlImg</label>
+    <input type="email" class="form-control" #articleUrlImg>
+  </div>
+  <div>
+    <button type="button" class="btn btn-success" (click)="add(articleNombre.value, articleDescripcion.value, articleFamilia.value,articleProcedencia.value,articleUrlImg.value); articleNombre.value=''; articleDescripcion.value=''; articleFamilia.value='';articleProcedencia.value=''; articleUrlImg.value='';">Add</button>
+  </div>
+</form>

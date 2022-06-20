@@ -1,0 +1,79 @@
+<div class="container emp-profile">
+  <form method="post">
+      <div class="row">
+          <div class="col-md-4">
+              <div class="profile-img">
+                  <img src="https://us.123rf.com/450wm/thesomeday123/thesomeday1231709/thesomeday123170900021/85622928-icono-de-perfil-de-avatar-predeterminado-marcador-de-posici%C3%B3n-de-foto-gris-vectores-de-ilustraciones.jpg?ver=6">
+              </div>
+          </div>
+          <div class="col-md-6">
+              <div class="profile-head">
+                  <h5>
+                      Bienvenido a Exportaciones Sombrerillo,
+                  </h5>
+                  <h6>
+                      {{UserProfile?.name}} ({{UserProfile?.rol}})
+                  </h6>
+                  <p class="proile-rating">Número de socio: {{UserProfile?.id}}</p>
+                  <ul class="nav nav-tabs" id="myTab" role="tablist">
+                      <li class="nav-item">
+                          <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab"
+                              aria-controls="home" aria-selected="true">About</a>
+                      </li>
+                  </ul>
+              </div>
+          </div>
+          <div class="col-md-2" hidden>
+              <input type="submit" class="profile-edit-btn" name="btnAddMore" value="Edit Profile" />
+          </div>
+      </div>
+      <div class="row">
+          <div class="col-md-4">
+              <div class="profile-work">
+                  <a href=""></a><br />
+                  <a href=""></a><br />
+                  <a href=""></a>
+              </div>
+          </div>
+          <div class="col-md-8">
+              <div class="tab-content profile-tab" id="myTabContent">
+                  <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                      <div class="row">
+                          <div class="col-md-6">
+                              <label>Name</label>
+                          </div>
+                          <div class="col-md-6">
+                              <p>{{UserProfile?.name}}</p>
+                          </div>
+                      </div>
+                      <div class="row">
+                          <div class="col-md-6">
+                              <label>Email</label>
+                          </div>
+                          <div class="col-md-6">
+                              <p>{{UserProfile?.email}}</p>
+                          </div>
+                      </div>
+                      <div class="row">
+                          <div class="col-md-6">
+                              <label>Phone</label>
+                          </div>
+                          <div class="col-md-6">
+                              <p>{{UserProfile?.telefono}}</p>
+                          </div>
+                      </div>
+                      <div class="row">
+                          <div class="col-md-6">
+                              <label>Dirección</label>
+                          </div>
+                          <div class="col-md-6">
+                              <p>{{UserProfile?.direccion}}</p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </form>
+</div>
+<div class="b-example-divider"></div><div class="b-example-divider"></div><div class="b-example-divider"></div>

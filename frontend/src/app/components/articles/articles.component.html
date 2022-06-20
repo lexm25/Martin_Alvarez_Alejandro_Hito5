@@ -1,0 +1,38 @@
+<div class="b-example-divider"></div>
+<div>
+  <table class="table text-white">
+    <thead>
+      <th>ID</th>
+      <th>NOMBRE</th>
+      <th>DESCRIPCIÓN</th>
+      <th>FAMILIA</th>
+      <th>PROCEDENCIA</th>
+      <th>IMAGEN</th>
+      <th>PRECIO</th>
+      <th>STOCK</th>
+    </thead>
+    <tbody *ngIf="articles.length">
+      <tr *ngFor="let article of articles">
+        <td>{{ article.id }}</td>
+        <td><img src="{{article.imagen}}" style="width: 200px;"></td>
+        <td>{{ article.nombre }}</td>
+        <td>{{ article.descripcion }}</td>
+        <td>{{ article.procedencia }}</td>
+        <td>{{ article.familia }}</td>
+        <td>{{article.precio}}</td>
+        <td>{{article.stock}}</td>
+        <td>
+          <button class="btn btn-info" routerLink="/edit/{{article.id}}">Edit</button>
+          <button class="btn btn-danger" (click)="deleteArticle(article.id)">Delete</button>&nbsp;
+          <button class="btn btn-danger" routerLink="/info/{{article.id}}">Info</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div>
+  <button class="btn btn-primary" routerLink="/add">Add New Article</button>
+</div>
+<div class="b-example-divider"></div>
+
+
