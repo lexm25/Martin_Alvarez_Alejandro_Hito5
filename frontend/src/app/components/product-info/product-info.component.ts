@@ -63,7 +63,7 @@ export class ProductInfoComponent implements OnInit {
       this.articles=article;
       this.router.navigateByUrl('/shopping-cart');
     });
-    console.log(this.articles);
+
   }
 
   submit() {

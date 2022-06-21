@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 21-06-2022 a las 02:11:16
+-- Tiempo de generación: 21-06-2022 a las 05:54:54
 -- Versión del servidor: 10.4.21-MariaDB
 -- Versión de PHP: 8.0.12
 
@@ -147,7 +147,8 @@ CREATE TABLE `shoppingcart` (
 
 INSERT INTO `shoppingcart` (`id`, `nombre`, `familia`, `imagen`, `cantidad`, `precio`, `created_at`, `updated_at`) VALUES
 (14, 'Tomate', 'Genaro', 'https://elcorreoweb.es/binrepository/tomate-de-los-palacios-1-20569958-20210126153931_20571667_20210129120737.jpg', 5, 2, '2022-06-20 21:28:11', '2022-06-20 21:28:11'),
-(15, 'Uva', 'De Mesa', 'https://portal.andina.pe/EDPfotografia3/Thumbnail/2019/09/11/000618887W.jpg', 3, 2, '2022-06-20 21:28:43', '2022-06-20 21:28:43');
+(15, 'Uva', 'De Mesa', 'https://portal.andina.pe/EDPfotografia3/Thumbnail/2019/09/11/000618887W.jpg', 3, 2, '2022-06-20 21:28:43', '2022-06-20 21:28:43'),
+(16, 'Sandía', 'Negra', 'https://www.palacios.es/palacios/usuariosFtp/conexion/imagenes4571a.jpg', 2, 2, '2022-06-21 00:27:58', '2022-06-21 00:27:58');
 
 -- --------------------------------------------------------
 
@@ -175,10 +176,8 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`id`, `name`, `email`, `direccion`, `telefono`, `rol`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
 (1, 'Alejandro Martín', 'alejandro@hotmail.com', 'c/amargura, 23', 666666666, 'admin', NULL, '$2y$10$YXHXi9tSyiT8eUS6Akec8.9VODNQDEMQ5iExh3rCbm6JOjNADHW1y', NULL, '2022-05-29 13:44:10', '2022-05-29 13:44:10'),
-(2, 'david', 'david@gmail.com', NULL, NULL, 'user', NULL, '$2y$10$pkpqQY1G/3IJd/ZUG6YYZOKZZtYk4B0SQYmZ9dYBA.Cqz7BuuVdBK', NULL, '2022-06-20 14:50:05', '2022-06-20 14:50:05'),
 (3, 'Antonio Gutiérrez', 'antonio@gmail.com', 'calle melainvento, 32', 632498758, 'user', NULL, '$2y$10$A9eWYdzOe8ok4oEMM3rxEesTj371wkoxmPkdkO6HOcN8N5IqyzDve', NULL, '2022-06-05 16:40:10', '2022-06-05 16:40:10'),
 (4, 'José Francisco Fernández', 'jose@gmail.com', 'calle nose, 534', 697412589, 'user', NULL, '$2y$10$YUgd/iJU/Fb2YfPkOKm78eGakN.zvbbliM/zd2298DxtP9kkkv7gO', NULL, '2022-06-05 16:40:32', '2022-06-05 16:40:32'),
-(5, 'jose manuel', 'perez@hotmail.com', NULL, NULL, 'user', NULL, '$2y$10$7k0r1Lqub.mJ4.Y1CBldjuJ64hJgMWVfUMZhxQJkm.dt2zbWtMDBm', NULL, '2022-06-20 21:02:11', '2022-06-20 21:02:11'),
 (6, 'Fernando Tejero', 'fernando@gmail.com', 'calle antonio machado', 654789321, 'admin', NULL, '$2y$10$/8QRD/OoxDdDft7UO2j6M.orkUHYrV3lJ0gqTGDfs/EY56etqmLmC', NULL, '2022-06-11 08:27:30', '2022-06-11 08:27:30');
 
 --
@@ -264,7 +263,7 @@ ALTER TABLE `personal_access_tokens`
 -- AUTO_INCREMENT de la tabla `shoppingcart`
 --
 ALTER TABLE `shoppingcart`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT de la tabla `users`

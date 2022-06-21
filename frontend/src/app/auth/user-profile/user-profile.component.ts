@@ -26,8 +26,11 @@ export class UserProfileComponent implements OnInit {
     });
   }
   ngOnInit() {
-    if (this.UserProfile.rol == 'admin') {
+    if (sessionStorage.getItem('rol')=="admin") {
       this.esAdmin=true;
+    }
+    if(sessionStorage.getItem('rol')=='' || sessionStorage.getItem('rol')==undefined || sessionStorage.getItem('rol')==null){
+      this.router.navigateByUrl('/login');
     }
   }
 

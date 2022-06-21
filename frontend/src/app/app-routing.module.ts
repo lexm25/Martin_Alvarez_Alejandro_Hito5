@@ -1,3 +1,4 @@
+import { PaymentComponent } from './components/payment/payment.component';
 import { ShoppingCartComponent } from './components/shopping-cart/shopping-cart.component';
 import { HomeComponent } from './components/home/home.component';
 import { ShopComponent } from './components/shop/shop.component';
@@ -58,6 +59,11 @@ const routes: Routes = [
     path: 'shopping-cart',
     component: ShoppingCartComponent,
   },
+  {
+    path: 'payment',
+    component: PaymentComponent,
+  }
+  ,
   { path: '**', redirectTo: '/home'},
 
 ];

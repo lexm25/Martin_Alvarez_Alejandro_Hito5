@@ -28,7 +28,7 @@ export class NewArticleComponent implements OnInit {
       this.articles=article;
       this.router.navigateByUrl('/articles');
     });
-    console.log(this.articles);
+
   }
 
 }

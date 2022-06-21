@@ -18,6 +18,7 @@ import { EditArticleComponent } from './components/edit-article/edit-article.com
 import { ShopComponent } from './components/shop/shop.component';
 import { ShoppingCartComponent } from './components/shopping-cart/shopping-cart.component';
 import { ProductInfoComponent } from './components/product-info/product-info.component';
+import { PaymentComponent } from './components/payment/payment.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { ProductInfoComponent } from './components/product-info/product-info.com
     UserProfileComponent,
     ShoppingCartComponent,
     ProductInfoComponent,
+    PaymentComponent,
   ],
   imports: [
     BrowserModule,

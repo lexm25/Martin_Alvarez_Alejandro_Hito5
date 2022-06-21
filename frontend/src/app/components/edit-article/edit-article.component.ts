@@ -18,10 +18,10 @@ export class EditArticleComponent implements OnInit {
   ngOnInit(): void {
     const routeParams = this.route.snapshot.paramMap;
     this.articleId = (routeParams.get('articleId'));
-    console.log(this.articleId);
+
     this.articleService.find(this.articleId).subscribe((data:any)=>{
       this.article = data;
-      console.log(this.article);
+
     });
   }
 
