@@ -21,6 +21,14 @@
     <label for="articleProcedencia" class="form-label">Procedencia</label>
     <input type="text" class="form-control" name="Procedencia" [(ngModel)]="article.procedencia">
   </div>
+  <div class="mb-3">
+    <label for="articlePrecio" class="form-label">Precio</label>
+    <input type="number" class="form-control" name="Precio" [(ngModel)]="article.precio">
+  </div>
+  <div class="mb-3">
+    <label for="articleStock" class="form-label">Stock</label>
+    <input type="number" class="form-control" name="Stock" [(ngModel)]="article.stock">
+  </div>
 
   <div>
     <button type="button" class="btn btn-success" (click)="update()">Update</button>

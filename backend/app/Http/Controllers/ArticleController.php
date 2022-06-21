@@ -56,7 +56,7 @@ class ArticleController extends Controller
             $article->procedencia = $request->procedencia;
             $article->imagen = $request->imagen;
             $article->precio = $request->precio;
-
+            $article->stock = $request->stock;
             $article->save();
             return response()->json([
                 "message"=>"record updated succesfully"
