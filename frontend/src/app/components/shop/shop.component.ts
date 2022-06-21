@@ -12,7 +12,7 @@ export class ShopComponent implements OnInit {
   esAdmin!: boolean;
   constructor(private articleService: ArticleService, private router: Router) { }
 
-  articles: any;
+  articles: any = [];
   ngOnInit(): void {
     this.esAdmin=false;
     this.showArticles();

@@ -26,6 +26,9 @@ export class UserProfileComponent implements OnInit {
     });
   }
   ngOnInit() {
+    if (this.UserProfile.rol == 'admin') {
+      this.esAdmin=true;
+    }
   }
 
   estaLogeado(){

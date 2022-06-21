@@ -1,27 +1,34 @@
+<div id="cabeza"><img class="d-block img-fluid"
+  src="https://i.pinimg.com/originals/a1/d9/c4/a1d9c427c9f36d75358abe824c7b7f42.png">
+</div>
 
-<div class="auth-wrapper">
+<div class="auth-wrapper justify-content-center" id="abs-center">
   <form class="form-signin text-white" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
-      <h3 class="h3 mb-3 font-weight-normal text-center">Sign in</h3>
+      <h3 class="h3 mb-3 font-weight-normal text-center">BIENVENIDO/A</h3>
       <!-- Errors -->
       <div *ngIf="errors?.error" class="alert alert-danger mt-3">
           {{ errors?.error }}
       </div>
       <!-- Login -->
-      <div class="form-group">
+      <div class="form-group mt-5">
           <label>Email address</label>
           <input type="email" class="form-control" formControlName="email">
       </div>
       <div *ngIf="errors?.email" class="alert alert-danger mt-3">
         {{ errors?.email }}
     </div>
-      <div class="form-group">
+      <div class="form-group mt-2">
           <label>Password</label>
           <input type="password" class="form-control" formControlName="password">
       </div>
       <div *ngIf="errors?.password" class="alert alert-danger mt-3">
         {{ errors?.password }}
     </div>
-      <button type="submit" class="btn btn-block btn-primary">Log in</button>&nbsp;
-      <button routerLink="/register" class="btn btn-block btn-primary">Register</button>
+    <div>
+      <span>¿Aún no estás registrado? <a routerLink="/register">Regístrate</a></span>
+  </div>
+      <button type="submit" class="btn btn-block btn-primary mt-4 justify-content-center">Entrar</button>&nbsp;
   </form>
 </div>
+
+<div class="b-example-divider"></div>

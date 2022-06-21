@@ -4,8 +4,8 @@
       <div class="row g-0">
         <div class="col-md-4">
           <img
-            src="https://us.123rf.com/450wm/koblizeek/koblizeek1902/koblizeek190200055/125337077-no-image-vector-symbol-missing-available-icon-no-gallery-for-this-moment-.jpg?ver=6"
-            class="img-fluid rounded-start" alt="...">
+            src="{{article.imagen}}"
+            class="img-fluid rounded-start" alt="{{article.nombre}} {{article.familia}}">
         </div>
         <div class="col-md-8">
           <div class="card-body">
@@ -20,7 +20,7 @@
   <div class="abs-center">
     <form [formGroup]="formularioProducto" (ngSubmit)="submit()" class="text-white">
       <label for="articleCantidad" class="form-label">Cantidad</label>
-      <input formControlName="articleCantidad"  class="form-control" type="number" minlength="5" max="30" #articleCantidad>
+      <div class="col-2 mb-3"><input formControlName="articleCantidad"  class="form-control" type="number" minlength="5" max="30" #articleCantidad></div>
       <!--<div *ngIf="this.formularioProducto.get('cantidad')?.errors?.['required']" class="alert alert-danger mt-3" #articleCantidad>
         Es cenesario que introduzcas la cantidad
       </div>
@@ -33,3 +33,5 @@
   </div>
   <div id="center" class="mt-4"></div>
 </div>
+
+<div class="b-example-divider"></div>

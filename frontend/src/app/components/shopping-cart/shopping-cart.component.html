@@ -1,9 +1,9 @@
 <div class="container py-5">
   <div class="row d-flex justify-content-center align-items-center">
     <div class="col-10">
-      <div class="d-flex justify-content-between align-items-center mb-4">
-        <h3 class="fw-normal mb-0 text-white">Shopping Cart</h3>
-      </div>
+
+      <h3 class="fw-normal mb-0 text-white">Artículos en el carrito:</h3>
+      <div class="rounded mt-1 mb-2"></div>
       <div *ngIf="carrito.length==0">
         <div class="card rounded-3 mb-4 text-center text-danger">
           SU CARRO ESTÁ VACÍO
@@ -55,7 +55,7 @@
         </div>
       </div>
       <div class="row justify-content-end text-white" style="font-size: 30px;">TOTAL A PAGAR: {{precio}}€</div>
-      <button>
+      <button class="btn btn-danger">
         PASAR POR CAJA
       </button>
     </div>

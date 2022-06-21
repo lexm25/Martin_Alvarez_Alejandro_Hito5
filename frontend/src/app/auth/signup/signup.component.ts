@@ -10,6 +10,7 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 export class SignupComponent implements OnInit {
   registerForm: FormGroup;
   errors: any = null;
+  esAdmin!:boolean;
   constructor(
     public router: Router,
     public fb: FormBuilder,
@@ -20,9 +21,15 @@ export class SignupComponent implements OnInit {
       email: [''],
       password: [''],
       password_confirmation: [''],
+      direccion: [''],
+      telefono: ['']
     });
   }
-  ngOnInit() {}
+  ngOnInit() {
+    if(sessionStorage.getItem('rol')=="admin"){
+      this.esAdmin=true;
+    }
+  }
   onSubmit() {
     this.authService.register(this.registerForm.value).subscribe(
       (result) => {

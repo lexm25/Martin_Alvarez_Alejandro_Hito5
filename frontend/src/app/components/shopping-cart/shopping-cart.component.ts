@@ -13,7 +13,6 @@ export class Article{
 })
 export class ShoppingCartComponent implements OnInit {
 
-  article!: Article;
   esAdmin!: boolean;
   carrito: any = [];
   precio: number = 0;
@@ -28,7 +27,7 @@ export class ShoppingCartComponent implements OnInit {
     this.carrito = this.shoppingCartService.listCart().subscribe(article=>{
       this.carrito = article;
       for (let i = 0; i < article.length; i++) {
-        this.precio = article[i]['precio'] + this.precio;
+        this.precio = (article[i]['precio'] * article[i]['cantidad']) + this.precio;
       }
     });
   }

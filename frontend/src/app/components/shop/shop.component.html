@@ -6,12 +6,14 @@
 <!-- *ngIf="articles.length" *ngFor="let article of articles" -->
 <div class="container d-flex justify-content-center mt-25 mb-25">
   <div class="row">
+    <h2 class="text-center" style="color: white;">¡LA TEMPORADA DE VERANO YA ESTÁ AQUÍ! DISFRUTE DE NUESTROS PRODUCTOS EXPORTADOS DIRECTAMENTE DESDE EL CAMPO.</h2>
+    <div class="rounded"></div>
     <div class="col-4 mt-2" *ngFor="let article of articles">
       <div class="card">
         <div class="card-body">
-          <div class="card-img-actions"> <img
-              src="https://us.123rf.com/450wm/koblizeek/koblizeek1902/koblizeek190200055/125337077-no-image-vector-symbol-missing-available-icon-no-gallery-for-this-moment-.jpg?ver=6"
-              class="card-img img-fluid" width="96" height="350" alt=""> </div>
+          <div class="card-img-actions">
+            <img src="{{article.imagen}}" class="card-img img-fluid" style="width: 200; height: 220px;" alt="{{article.nombre}} article.familia}}">
+          </div>
         </div>
         <div class="card-body bg-light text-center">
           <div class="mb-2">
