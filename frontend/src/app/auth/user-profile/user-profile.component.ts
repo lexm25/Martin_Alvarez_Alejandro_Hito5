@@ -29,9 +29,6 @@ export class UserProfileComponent implements OnInit {
     if (sessionStorage.getItem('rol')=="admin") {
       this.esAdmin=true;
     }
-    if(sessionStorage.getItem('rol')=='' || sessionStorage.getItem('rol')==undefined || sessionStorage.getItem('rol')==null){
-      this.router.navigateByUrl('/login');
-    }
   }
 
   estaLogeado(){

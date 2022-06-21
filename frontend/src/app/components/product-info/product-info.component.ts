@@ -49,7 +49,7 @@ export class ProductInfoComponent implements OnInit {
   refresh(): void { window.location.reload(); }
 
   formularioProducto = new FormGroup({
-    cantidad: new FormControl('', [Validators.required, Validators.pattern("[0-9]")])
+    cantidad: new FormControl('', [Validators.required, Validators.pattern("^[1-9]{1,2}$")])
   });
 
   addCarrito(articleNombre:string, articleFamilia:string, articleUrlImg:string, articleCantidad:string,){
@@ -67,10 +67,12 @@ export class ProductInfoComponent implements OnInit {
   }
 
   submit() {
-    if (this.formularioProducto.valid)
+    if (this.formularioProducto.valid){
       this.resultado = "Todos los datos son válidos";
-    else
+    }
+    else{
       this.resultado = "Hay datos inválidos en el formulario";
+    }
   }
 
 }

@@ -88,4 +88,10 @@ class ShoppingCartController extends Controller
             ],404);
         }
     }
+
+    public function destroyAll()
+    {
+        $shoppingCart = ShoppingCart::all();
+            $shoppingCart->delete();
+    }
 }

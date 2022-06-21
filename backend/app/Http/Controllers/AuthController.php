@@ -52,7 +52,7 @@ class AuthController extends Controller {
             'email' => 'required|string|email|max:100|unique:users',
             'password' => 'required|string|confirmed|min:6',
             'direccion' => 'required|string',
-            'telefono' => 'required|integer|unique:users'
+            'telefono' => 'required|integer|min:9|unique:users'
         ]);
 
         if($validator->fails()){

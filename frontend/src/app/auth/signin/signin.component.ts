@@ -24,11 +24,7 @@ export class SigninComponent implements OnInit {
       password: [],
     });
   }
-  ngOnInit() {
-    if(sessionStorage.getItem('rol')!='' || sessionStorage.getItem('rol')!=null || sessionStorage.getItem('rol')!= undefined){
-      this.router.navigate(['/login']);
-    }
-  }
+  ngOnInit() {}
   onSubmit() {
     this.authService.signin(this.loginForm.value).subscribe(
       (result) => {
@@ -40,7 +36,7 @@ export class SigninComponent implements OnInit {
       () => {
         this.authState.setAuthState(true);
         this.loginForm.reset();
-        this.router.navigate(['profile']);
+        this.router.navigateByUrl('/profile');
       }
     );
   }
